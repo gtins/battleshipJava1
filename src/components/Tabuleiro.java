@@ -17,8 +17,6 @@ public class Tabuleiro {
         int vertical = 0;
         int tamanho = posicao.getTamanho();
 
-        System.out.println("Tamanho ehhhh" + tamanho);
-
         matriz[linhaInicial][colunaInicial] = caracter;
 
         if( Character.toUpperCase(posicao.getDirecao()) == 'H') {
@@ -27,7 +25,9 @@ public class Tabuleiro {
             vertical = 1;
         }
         for( int i = 0; i< tamanho; i++) {
-            matriz[linhaInicial + (i * vertical) ][colunaInicial + (i * horizontal)] = caracter;
+            int linha = linhaInicial + (i * vertical);
+            int coluna = colunaInicial + (i * horizontal);
+            matriz[linha][coluna] = caracter;
         }
     }
 
