@@ -5,13 +5,9 @@ public abstract class Posicao {
     protected int colunaInicial;
     protected char caracter;
 
-    protected Direcao direcao;
+    protected char direcao;
 
-     Posicao(String tipo, int linhaInicial, int colunaInicial, char caracter) {
-       this(tipo,linhaInicial,colunaInicial,caracter,Direcao.VERTICAL);
-    }
-
-    Posicao(String tipo, int linhaInicial, int colunaInicial, char caracter, Direcao direcao) {
+    Posicao(String tipo, int linhaInicial, int colunaInicial, char caracter, char direcao) {
         this.tipo = tipo;
         this.linhaInicial = linhaInicial;
         this.colunaInicial = colunaInicial;
@@ -35,7 +31,9 @@ public abstract class Posicao {
         return caracter;
     }
 
-    public Direcao getDirecao() {
+    public abstract int getTamanho();
+
+    public char getDirecao() {
          return this.direcao;
     }
 }

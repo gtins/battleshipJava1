@@ -1,10 +1,10 @@
-PortaAvião, 0, 0
-NavioTanque, 1, 1
-NavioTanque, 2, 0
-ContraTorpedeiro, 3, 0
-ContraTorpedeiro, 4, 0
-ContraTorpedeiro, 5, 0
-Submarino, 6, 0
-Submarino, 7, 0
-Submarino, 8, 0
-Submarino, 9, 0
+PortaAvião, 0, 0, V
+NavioTanque, 1, 1, V
+NavioTanque, 2, 0, V
+ContraTorpedeiro, 3, 0, V
+ContraTorpedeiro, 4, 0, V
+ContraTorpedeiro, 5, 0, V
+Submarino, 6, 0, H
+Submarino, 7, 0, V
+Submarino, 8, 0, V
+Submarino, 9, 0, V

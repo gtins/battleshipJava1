@@ -27,8 +27,9 @@ public class CarregadorEmbarcacoes {
                 String tipo = parts[0].trim();
                 int linhaInicial = Integer.parseInt(parts[1].trim());
                 int colunaInicial = Integer.parseInt(parts[2].trim());
+                char direcao = parts[3].trim().charAt(0);
 
-                Posicao posicao = PosicaoFactory.criar(tipo, linhaInicial, colunaInicial);
+                Posicao posicao = PosicaoFactory.criar(tipo, linhaInicial, colunaInicial,direcao);
                 if (posicao != null) {
                     embarcacoes.add(posicao);
                     contador++;

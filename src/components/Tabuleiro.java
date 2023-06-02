@@ -15,20 +15,19 @@ public class Tabuleiro {
         char caracter = posicao.getCaracter();
         int horizontal = 0;
         int vertical = 0;
+        int tamanho = posicao.getTamanho();
+
+        System.out.println("Tamanho ehhhh" + tamanho);
 
         matriz[linhaInicial][colunaInicial] = caracter;
 
-        if( posicao.getDirecao() == Direcao.HORIZONTAL) {
+        if( Character.toUpperCase(posicao.getDirecao()) == 'H') {
             horizontal = 1;
         } else {
             vertical = 1;
         }
-
-        if (posicao instanceof PortaAviao) {
-            matriz[linhaInicial + (1 * vertical) ][colunaInicial + (1 * horizontal)] = caracter;
-            matriz[linhaInicial + (2 * vertical) ][colunaInicial + (2 * horizontal)] = caracter;
-            matriz[linhaInicial + (3 * vertical) ][colunaInicial + (3 * horizontal)] = caracter;
-            matriz[linhaInicial + (4 * vertical) ][colunaInicial + (4 * horizontal)] = caracter;
+        for( int i = 0; i< tamanho; i++) {
+            matriz[linhaInicial + (i * vertical) ][colunaInicial + (i * horizontal)] = caracter;
         }
     }
 
