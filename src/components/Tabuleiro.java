@@ -9,7 +9,7 @@ public class Tabuleiro {
         this.tamanho = tamanho;
     }
 
-    public void adicionarEmbarcacao(Posicao posicao) {
+    public void adicionarEmbarcacao(Posicao posicao) { //recebe do arraylist que esta atrelado aos documento csv
         int linhaInicial = posicao.getLinhaInicial();
         int colunaInicial = posicao.getColunaInicial();
         char caracter = posicao.getCaracter();
@@ -27,7 +27,7 @@ public class Tabuleiro {
         for( int i = 0; i< tamanho; i++) {
             int linha = linhaInicial + (i * vertical);
             int coluna = colunaInicial + (i * horizontal);
-            matriz[linha][coluna] = caracter;
+            matriz[linha][coluna] = caracter; //define a nova matriz com as posições vindas do csv
         }
     }
 

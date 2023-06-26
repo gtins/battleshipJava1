@@ -6,14 +6,14 @@ public class Visualizador {
         this.tabuleiro = tabuleiro;
     }
     public void ver() {
-        int tamanho = tabuleiro.getTamanho();
-        char[][] matriz = tabuleiro.getMatriz();
+        int tamanho = tabuleiro.getTamanho(); //pega o tamanho que esta na classe tabuleiro
+        char[][] matriz = tabuleiro.getMatriz(); //mesma coisa para a matriz
         System.out.print(" ====================================\n");
         System.out.print(" =====         PLACAR " + tabuleiro.getPontuacao() + "         ===== \n");
         System.out.print(" ====================================\n");
         System.out.print("            0 1 2 3 4 5 6 7 8 9\n");
-
-        for (int linha = 0; linha < tamanho; linha++) {
+// prints normais
+        for (int linha = 0; linha < tamanho; linha++) { //for normal
             System.out.print("          " + linha + " ");
             for (int coluna = 0; coluna < tamanho; coluna++) {
                 char caracter = matriz[linha][coluna];
