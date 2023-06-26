@@ -38,5 +38,13 @@ public class Tabuleiro {
     public char[][] getMatriz() {
         return this.matriz;
     }
+
+    public int getPontuacao() {
+        return 0;
+    }
+
+    public boolean gameOver(){
+        return false;
+    }
 }
 
